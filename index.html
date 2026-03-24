@@ -183,18 +183,51 @@ footer strong{color:var(--gold)}
 <footer><span id="footerText">صُنع بـ ❤️ بواسطة <strong>Ekhasimha اخصمها</strong></span></footer>
 
 <script>
-const COUPONS=[{"id":1,"shop_name_en":"Noon","shop_name_ar":"نون","logo_url":"https://logo.clearbit.com/noon.com","code":"NOON50","discount":"50% OFF","description_en":"Get 50% off on electronics and gadgets across the entire store.","description_ar":"احصل على خصم 50% على الإلكترونيات والأجهزة في جميع أنحاء المتجر.","conditions_en":"Valid on selected items. Cannot be combined with other offers. Expires Dec 31.","conditions_ar":"صالح على منتجات مختارة. لا يمكن دمجه مع عروض أخرى. ينتهي في 31 ديسمبر.","shop_url":"https://www.noon.com","categories":["electronics","fashion","home"],"copy_count":4821,"color":"#F59E0B"},{"id":2,"shop_name_en":"Amazon SA","shop_name_ar":"أمازون السعودية","logo_url":"https://logo.clearbit.com/amazon.sa","code":"AMZSA30","discount":"30% OFF","description_en":"Exclusive 30% discount on your first order from Amazon Saudi Arabia.","description_ar":"خصم حصري 30% على أول طلب من أمازون السعودية.","conditions_en":"First order only. Minimum spend SAR 100. Valid for 30 days.","conditions_ar":"للطلب الأول فقط. الحد الأدنى للإنفاق 100 ريال. صالح لمدة 30 يومًا.","shop_url":"https://www.amazon.sa","categories":["electronics","books","home"],"copy_count":7203,"color":"#FF6B35"},{"id":3,"shop_name_en":"Namshi","shop_name_ar":"نمشي","logo_url":"https://logo.clearbit.com/namshi.com","code":"NAMSHI20","discount":"20% OFF","description_en":"Fashion deals you can't miss — 20% off on all clothing and accessories.","description_ar":"صفقات أزياء لا تفوتك — خصم 20% على جميع الملابس والإكسسوارات.","conditions_en":"Applies to full-price items only. Not valid on sale items.","conditions_ar":"ينطبق على المنتجات بالسعر الكامل فقط. غير صالح على العروض.","shop_url":"https://www.namshi.com","categories":["fashion","beauty"],"copy_count":3105,"color":"#EC4899"},{"id":4,"shop_name_en":"Jarir Bookstore","shop_name_ar":"مكتبة جرير","logo_url":"https://logo.clearbit.com/jarir.com","code":"JARIR15","discount":"15% OFF","description_en":"Save 15% on books, stationery, and office supplies at Jarir.","description_ar":"وفر 15% على الكتب والقرطاسية ومستلزمات المكتب في جرير.","conditions_en":"Valid on books and stationery. Excludes electronics and gaming.","conditions_ar":"صالح على الكتب والقرطاسية. يستثني الإلكترونيات والألعاب.","shop_url":"https://www.jarir.com","categories":["books","electronics","education"],"copy_count":2450,"color":"#10B981"},{"id":5,"shop_name_en":"Talabat","shop_name_ar":"طلبات","logo_url":"https://logo.clearbit.com/talabat.com","code":"TALA25","discount":"25% OFF","description_en":"Order food online and enjoy 25% off your next 3 orders on Talabat.","description_ar":"اطلب الطعام أونلاين واستمتع بخصم 25% على طلباتك الثلاث القادمة.","conditions_en":"Valid for 3 orders. Minimum order SAR 40. Delivery fees apply.","conditions_ar":"صالح لـ 3 طلبات. الحد الأدنى 40 ريال. تُطبق رسوم التوصيل.","shop_url":"https://www.talabat.com/saudi-arabia","categories":["food","delivery"],"copy_count":9314,"color":"#EF4444"},{"id":6,"shop_name_en":"Sephora KSA","shop_name_ar":"سيفورا السعودية","logo_url":"https://logo.clearbit.com/sephora.com","code":"SEPH20","discount":"20% OFF","description_en":"Beauty on a budget — 20% off skincare and makeup at Sephora.","description_ar":"جمال بميزانية مناسبة — خصم 20% على العناية بالبشرة والمكياج في سيفورا.","conditions_en":"Excludes luxury brands. Valid online and in-store. Limited time.","conditions_ar":"يستثني العلامات التجارية الفاخرة. صالح أونلاين وفي المتجر.","shop_url":"https://www.sephora.com/sa","categories":["beauty","fashion"],"copy_count":5678,"color":"#8B5CF6"},{"id":7,"shop_name_en":"Careem","shop_name_ar":"كريم","logo_url":"https://logo.clearbit.com/careem.com","code":"CAREEM10","discount":"10 SAR OFF","description_en":"Get SAR 10 off your next Careem ride or delivery order.","description_ar":"احصل على خصم 10 ريال على رحلتك القادمة أو طلب التوصيل عبر كريم.","conditions_en":"One-time use per account. Minimum ride value SAR 20.","conditions_ar":"استخدام مرة واحدة لكل حساب. الحد الأدنى لقيمة الرحلة 20 ريال.","shop_url":"https://www.careem.com","categories":["transport","delivery","food"],"copy_count":6102,"color":"#06B6D4"},{"id":8,"shop_name_en":"IKEA Saudi Arabia","shop_name_ar":"إيكيا السعودية","logo_url":"https://logo.clearbit.com/ikea.com","code":"IKEA35","discount":"35% OFF","description_en":"Transform your home with 35% off furniture and home accessories at IKEA.","description_ar":"حوّل منزلك بخصم 35% على الأثاث وإكسسوارات المنزل من إيكيا.","conditions_en":"Valid on selected furniture items. In-store purchase only. While stocks last.","conditions_ar":"صالح على قطع أثاث مختارة. للشراء في المتجر فقط. حتى نفاد الكمية.","shop_url":"https://www.ikea.com/sa","categories":["home","furniture"],"copy_count":1987,"color":"#F59E0B"}];
+let COUPONS=[];
 
 const CAT_AR={"all":"الكل","electronics":"إلكترونيات","fashion":"أزياء","home":"المنزل","beauty":"جمال","food":"طعام","delivery":"توصيل","transport":"مواصلات","books":"كتب","education":"تعليم","furniture":"أثاث"};
 const CAT_EN={"all":"All","electronics":"Electronics","fashion":"Fashion","home":"Home","beauty":"Beauty","food":"Food","delivery":"Delivery","transport":"Transport","books":"Books","education":"Education","furniture":"Furniture"};
-let copyCounts={};COUPONS.forEach(c=>{copyCounts[c.id]=c.copy_count;});
+let copyCounts={};
 let activeCat='all',showHot=false,shareData=null,lang='ar';
 const T={
   ar:{eyebrow:'أفضل الكوبونات والعروض',title:'وفّر أكثر مع <em>اخصمها</em>',sub:'كوبونات حصرية من أكبر المتاجر — انسخ، شارك، وابدأ التوفير الآن',statCoupons:'كوبون متاح',statCopies:'نسخة إجمالية',statShops:'متجر مشارك',hot:'الأكثر استخداماً',hotSort:'مرتبة حسب الأكثر استخداماً',defaultSort:'مرتبة حسب الإضافة',copy:'نسخ',copied:'تم!',share:'مشاركة',shop:'تسوّق',badge:'🎫 كوبونات حصرية',modalTitle:'📤 مشاركة الكوبون',modalSub:'رسالة جاهزة للمشاركة مع أصدقائك',cancel:'إلغاء',copyMsg:'📋 نسخ الرسالة',footer:'صُنع بـ ❤️ بواسطة <strong>Ekhasimha اخصمها</strong>',emptyTitle:'لم يُعثر على كوبونات',emptySub:'جرّب كلمات مختلفة أو غيّر الفئة',placeholder:'ابحث عن متجر أو كوبون...',langLabel:'English',toastCopied:'تم نسخ كود',toastShare:'تم نسخ رسالة المشاركة!'},
   en:{eyebrow:'Best Coupons & Deals',title:'Save More with <em>Ekhasimha</em>',sub:'Exclusive coupons from top stores — copy, share, and start saving now',statCoupons:'Coupons',statCopies:'Total Copies',statShops:'Stores',hot:'Most Used',hotSort:'Sorted by Most Used',defaultSort:'Sorted by Added',copy:'Copy',copied:'Done!',share:'Share',shop:'Shop',badge:'🎫 Exclusive Coupons',modalTitle:'📤 Share Coupon',modalSub:'Ready message to share with friends',cancel:'Cancel',copyMsg:'📋 Copy Message',footer:'Made with ❤️ by <strong>Ekhasimha اخصمها</strong>',emptyTitle:'No coupons found',emptySub:'Try different keywords or change category',placeholder:'Search for a store or coupon...',langLabel:'عربي',toastCopied:'Copied code',toastShare:'Share message copied!'}
 };
 function t(k){return T[lang][k]||k;}
-document.addEventListener('DOMContentLoaded',()=>{buildCategories();render();updateStats();document.getElementById('searchInput').addEventListener('input',render);});
+document.addEventListener('DOMContentLoaded',()=>{
+  // Show loading skeleton
+  document.getElementById('grid').innerHTML=`
+    <div style="grid-column:1/-1;text-align:center;padding:60px 20px;color:var(--muted)">
+      <div style="font-size:40px;margin-bottom:14px">⏳</div>
+      <p style="font-size:15px">جارٍ تحميل الكوبونات…</p>
+    </div>`;
+
+  fetch('coupons.json')
+    .then(r=>{
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json();
+    })
+    .then(data=>{
+      COUPONS=data;
+      // Seed live copy counts from JSON
+      COUPONS.forEach(c=>{ copyCounts[c.id]=c.copy_count; });
+      buildCategories();
+      render();
+      updateStats();
+    })
+    .catch(err=>{
+      document.getElementById('grid').innerHTML=`
+        <div style="grid-column:1/-1;text-align:center;padding:60px 20px;color:var(--muted)">
+          <div style="font-size:48px;margin-bottom:14px">⚠️</div>
+          <h3 style="color:var(--text);margin-bottom:8px">تعذّر تحميل الكوبونات</h3>
+          <p style="font-size:13px">تأكد من وجود ملف coupons.json بجانب index.html</p>
+          <p style="font-size:11px;margin-top:6px;opacity:.5">${err.message}</p>
+        </div>`;
+      console.error('Failed to load coupons.json:', err);
+    });
+
+  document.getElementById('searchInput').addEventListener('input',render);
+});
 function toggleLang(){
   lang=(lang==='ar'?'en':'ar');
   const html=document.getElementById('htmlRoot');
@@ -331,7 +364,6 @@ ${c.description_ar}
 🛒 ابدأ التسوق: ${c.shop_url}
 
 ✨ شارك مع أصدقائك ووفّروا معاً!
-https://ekhasimha.com/
 — Ekhasimha اخصمها`:
 `🎫 Exclusive Coupon from Ekhasimha!
 
@@ -344,7 +376,6 @@ ${c.description_en}
 🛒 Shop Now: ${c.shop_url}
 
 ✨ Share with friends and save together!
-https://ekhasimha.com/
 — Ekhasimha اخصمها`;
 
   // Try native Web Share API first (shows OS share sheet: WhatsApp, Twitter, etc.)
