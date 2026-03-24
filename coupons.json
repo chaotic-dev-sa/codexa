@@ -14,8 +14,7 @@
     "categories": ["electronics", "fashion", "home"],
     "copy_count": 1,
     "color": "#F59E0B"
-  }
-  [
+  },
   {
     "id": 2,
     "shop_name_en": "Namshi",
@@ -64,5 +63,4 @@
     "copy_count": 0,
     "color": "#F59E0B"
   }
-]
 ]
