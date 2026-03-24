@@ -15,4 +15,54 @@
     "copy_count": 1,
     "color": "#F59E0B"
   }
+  [
+  {
+    "id": 2,
+    "shop_name_en": "Namshi",
+    "shop_name_ar": "نمشي",
+    "logo_url": "https://logo.clearbit.com/namshi.com",
+    "code": "CMM361",
+    "discount": "10% cashback up to 75 SAR",
+    "description_en": "Get 10% cashback on all products except beauty items. 10% on non-sale items and 5% on sale items.",
+    "description_ar": "احصل على 10% كاش باك على جميع المنتجات ما عدا التجميلية. 10% على المنتجات غير المخفضة و5% على المنتجات المخفضة.",
+    "conditions_en": "Max cashback 75 SAR. Excludes beauty products.",
+    "conditions_ar": "الحد الأقصى 75 ريال. لا يشمل المنتجات التجميلية.",
+    "shop_url": "https://www.namshi.com",
+    "categories": ["fashion"],
+    "copy_count": 0,
+    "color": "#E91E63"
+  },
+  {
+    "id": 3,
+    "shop_name_en": "Sweater",
+    "shop_name_ar": "سويتر",
+    "logo_url": "https://logo.clearbit.com/sweater.sa",
+    "code": "WM6T",
+    "discount": "Car wash service discount",
+    "description_en": "Book car wash and detailing services easily through the app in Saudi Arabia.",
+    "description_ar": "احجز خدمات غسيل وتلميع السيارات بسهولة عبر التطبيق في السعودية.",
+    "conditions_en": "Download the app and book service. Terms may vary.",
+    "conditions_ar": "يجب تحميل التطبيق وحجز الخدمة. قد تختلف الشروط.",
+    "shop_url": "https://www.sweater.sa/",
+    "categories": ["services"],
+    "copy_count": 0,
+    "color": "#3B82F6"
+  },
+  {
+    "id": 4,
+    "shop_name_en": "Noon",
+    "shop_name_ar": "نون",
+    "logo_url": "https://logo.clearbit.com/noon.com",
+    "code": "CMM352",
+    "discount": "15% (new users) / 10% (existing users) cashback",
+    "description_en": "Noon is a leading e-commerce platform offering millions of products with fast delivery.",
+    "description_ar": "نون منصة تسوق إلكتروني رائدة توفر ملايين المنتجات مع شحن سريع.",
+    "conditions_en": "New users: 15% cashback up to 75 SAR. Existing users: 10% cashback up to 20 SAR.",
+    "conditions_ar": "للعملاء الجدد: 15% كاش باك حتى 75 ريال. للعملاء الحاليين: 10% حتى 20 ريال.",
+    "shop_url": "https://www.noon.com/",
+    "categories": ["electronics", "fashion", "home"],
+    "copy_count": 0,
+    "color": "#F59E0B"
+  }
+]
 ]
